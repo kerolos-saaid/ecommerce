@@ -1,0 +1,983 @@
+{
+	"info": {
+		"_postman_id": "81b68901-e299-4842-b2d1-325f4aa12bda",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27667807"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWY3MWU4OTI1OGI4Mjk4NWZiZmZjYiIsImVtYWlsIjoia29wci5veTEuMEBnbWFpbC5jb20iLCJpYXQiOjE2OTM0MTQwNTZ9.kjQirOuL5KwW8p2moOGbC_j9ERPHRRWwC9EMw6cNdto",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hgfgnfghhggfh",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/uml.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/64ebd47d8dc081e58ae4b916",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"64ebd47d8dc081e58ae4b916"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/64dd4a1a293f4fae3c5db007",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"64dd4a1a293f4fae3c5db007"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWU4NmEwZjJiZmIzODAxMDU4M2Y0OSIsImVtYWlsIjoia29wcm95MTBAZ21haWwuY29tIiwiaWF0IjoxNjkzMzYzMjYwfQ.awinuGd3wpqO1GwRV_jX79daMsUjNxY2JbUpWx9Ufx8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category?page=1&size=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub-Category",
+			"item": [
+				{
+					"name": "Add Sub-Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{$randomWord}}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/uml.png"
+								},
+								{
+									"key": "categoryID",
+									"value": "64ebee757b2eeb99914c11bb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/subCategory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sub-Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ggez",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/code.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/subCategory/64ea97e1891b34850020b38e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subCategory",
+								"64ea97e1891b34850020b38e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub-Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subCategory/64ea97e1891b34850020b38e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subCategory",
+								"64ea97e1891b34850020b38e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sub-Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subCategory/64eaa90f95ac1f6c9fa8efa0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subCategory",
+								"64eaa90f95ac1f6c9fa8efa0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sub-Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subCategory?size=1&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subCategory"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "Add Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWU4NmEwZjJiZmIzODAxMDU4M2Y0OSIsImVtYWlsIjoia29wcm95MTBAZ21haWwuY29tIiwiaWF0IjoxNjkzMzYzNDE4fQ.-ivcqnUmAAO__J3UH0TRQ_DxCjge76QA3mD3m8hGGZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/uml.png"
+								},
+								{
+									"key": "name",
+									"value": "{{$randomBankAccountIban}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/brand/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brand",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Brand",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/brand/64eb6fef11e29bfe9daf8767",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brand",
+								"64eb6fef11e29bfe9daf8767"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brand by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/brand/64eaacc721b7d93558fb18bd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brand",
+								"64eaacc721b7d93558fb18bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjA4ODI1ODViMWZjM2EwNTVhMjUzYiIsImVtYWlsIjoia29wcm95MTBAZ21haWwuY29tIiwiaWF0IjoxNjkzNTc4Mjc2fQ.mY8tgihWnueVuoKYYmg-2fElucumIxdVf194qBm7E4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{$randomWords}}",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "{{$randomWords}}",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "{{$randomInt}}",
+									"type": "text"
+								},
+								{
+									"key": "categoryID",
+									"value": "64ebee757b2eeb99914c11bb",
+									"type": "text"
+								},
+								{
+									"key": "subCategoryID",
+									"value": "64ebee897b2eeb99914c11c0",
+									"type": "text"
+								},
+								{
+									"key": "brandID",
+									"value": "64ebd9168dc081e58ae4b91d",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/1080p-minimalist-85m2yfqvqtbjdak9.jpg"
+								},
+								{
+									"key": "quantity",
+									"value": "{{$randomInt}}",
+									"type": "text"
+								},
+								{
+									"key": "coverImages",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/uml.png",
+									"disabled": true
+								},
+								{
+									"key": "discount",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product/64dd461ff7a2b03ef6871855",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"64dd461ff7a2b03ef6871855"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Kerolos Saaid",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/uml.png"
+								},
+								{
+									"key": "phone",
+									"value": "01553609829",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "koproy10.5@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Kero12345678",
+									"type": "text"
+								},
+								{
+									"key": "DOB",
+									"value": "2003-05-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"koproy10@gmail.com\",\r\n    \"code\": \"hc6Dho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/confirm-email",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"confirm-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"koproy10.5@gmail.com\",\r\n    \"password\":\"Kero12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"koproy10@gmail.com\",\r\n    //\"code\": \"0k8Q2U\",\r\n    \"newPassword\": \"kero123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/reset-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Pass Change Code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"koproy10@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/send-code",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"send-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add To Favourites",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/user/add-to-favorites/64eff167be806622fb210367",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"add-to-favorites",
+								"64eff167be806622fb210367"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Favourites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/user/get-favorites",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"get-favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add To Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"64eff0b5021cc453fe4314be\",\r\n    \"quantity\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cart/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete From Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cart/deleteFromCart/:productID",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart",
+								"deleteFromCart",
+								":productID"
+							],
+							"variable": [
+								{
+									"key": "productID",
+									"value": "64ebee997b2eeb99914c11c6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cart/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Copon",
+			"item": [
+				{
+					"name": "Add Copon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjA4ODI1ODViMWZjM2EwNTVhMjUzYiIsImVtYWlsIjoia29wcm95MTBAZ21haWwuY29tIiwiaWF0IjoxNjkzNDg1MTM3fQ.eZvtJT7shs2Svt3S9n4S2KJNKeFn8kEC9r2tMvIxkVE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"newcoupon2\",\r\n    \"amount\":15,\r\n    \"noOfUses\":150,\r\n    \"expireDate\":\"2023-11-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1MTM2MjV9.IAnl6EX2Mip30RiH1m_J5LZRWaOsNFindJhcS1pfdNc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Dar-Elsalam\",\r\n    //\"phone\": \"01553609829\",\r\n    \"products\": [\r\n        {\r\n            \"product\":\"64eff0b5021cc453fe4314be\",\r\n            \"quantity\":1\r\n        },\r\n        {\r\n            \"product\":\"64eff2651613a7a92e408fda\",\r\n            \"quantity\":1\r\n        },\r\n        {\r\n            \"product\":\"64f1f446b2c218468ac0f968\",\r\n            \"quantity\":1\r\n        }\r\n    ],\r\n    \"coupon\":\"newcoupon2\",\r\n    \"paymentMethod\":\"card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1OTYxMzh9.skYjUuSv91LKWs3XWwV2KmY6Ap_6ZMHeymypIvOLS-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\": \"64eff0b5021cc453fe4314be\",\r\n    \"rating\": 3.5,\r\n    \"comment\": \"very nice product\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1OTYxMzh9.skYjUuSv91LKWs3XWwV2KmY6Ap_6ZMHeymypIvOLS-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 1.5,\r\n    \"comment\": \"not working\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/64f254f6c6e869cf0bf74b57",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"64f254f6c6e869cf0bf74b57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBmNzhhNzQ1ODNmMTUxNmI5MDUwNyIsImVtYWlsIjoia29wcm95MTAuNUBnbWFpbC5jb20iLCJpYXQiOjE2OTM1OTYxMzh9.skYjUuSv91LKWs3XWwV2KmY6Ap_6ZMHeymypIvOLS-M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/review/64f25a717609f9af943aa0c9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"64f25a717609f9af943aa0c9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
